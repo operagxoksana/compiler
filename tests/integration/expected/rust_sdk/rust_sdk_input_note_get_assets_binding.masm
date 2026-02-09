@@ -193,6 +193,9 @@ proc miden:rust-sdk-input-note-get-assets-binding/rust-sdk-input-note-get-assets
     trace.252
     nop
     push.0
+    push.0
+    mul.4294967296
+    add
     push.4
     dup.2
     u32wrapping_add
@@ -237,6 +240,9 @@ proc miden:rust-sdk-input-note-get-assets-binding/rust-sdk-input-note-get-assets
     exec.::intrinsics::mem::store_sw
     trace.252
     nop
+    push.0
+    mul.4294967296
+    add
 end
 
 @callconv("C")

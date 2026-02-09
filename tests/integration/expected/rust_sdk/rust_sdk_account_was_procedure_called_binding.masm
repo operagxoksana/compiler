@@ -81,6 +81,9 @@ proc miden:rust-sdk-account-was-procedure-called-binding/rust-sdk-account-was-pr
     nop
     push.0
     push.0
+    mul.4294967296
+    add
+    push.0
     movup.2
     swap.1
     push.1
@@ -234,9 +237,15 @@ proc miden:rust-sdk-account-was-procedure-called-binding/rust-sdk-account-was-pr
     nop
     push.1
     push.0
+    push.0
+    mul.4294967296
+    add
     movup.2
     eq
     neq
+    push.0
+    mul.4294967296
+    add
 end
 
 @callconv("C")

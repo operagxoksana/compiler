@@ -28,8 +28,9 @@ builtin.component miden:base/note-script@1.0.0 {
             v7 = hir.exec @miden:base/note-script@1.0.0/counter_note/counter_note::bindings::miden::counter_contract::counter_contract::get_count::wit_import0() : felt
             v8 = hir.exec @miden:base/note-script@1.0.0/counter_note/counter_note::bindings::miden::counter_contract::counter_contract::increment_count::wit_import0() : felt
             v12 = hir.exec @miden:base/note-script@1.0.0/counter_note/counter_note::bindings::miden::counter_contract::counter_contract::get_count::wit_import0() : felt
-            v40 = arith.constant 1 : felt;
-            v11 = arith.add v7, v40 : felt #[overflow = unchecked];
+            v9 = arith.constant 1 : i64;
+            v10 = arith.trunc v9 : felt;
+            v11 = arith.add v7, v10 : felt #[overflow = unchecked];
             hir.assert_eq v12, v11;
             builtin.ret ;
         };
@@ -57,12 +58,12 @@ builtin.component miden:base/note-script@1.0.0 {
                 v27 = hir.bitcast v26 : ptr<byte, i32>;
                 v28 = hir.load v27 : i32;
                 hir.exec @miden:base/note-script@1.0.0/counter_note/__wasm_call_ctors()
-                v42 = arith.constant 1 : u8;
-                v44 = arith.constant 1048588 : i32;
-                v30 = arith.add v28, v44 : i32 #[overflow = wrapping];
+                v41 = arith.constant 1 : u8;
+                v43 = arith.constant 1048588 : i32;
+                v30 = arith.add v28, v43 : i32 #[overflow = wrapping];
                 v34 = hir.bitcast v30 : u32;
                 v35 = hir.int_to_ptr v34 : ptr<byte, u8>;
-                hir.store v35, v42;
+                hir.store v35, v41;
                 scf.yield ;
             };
             builtin.ret ;

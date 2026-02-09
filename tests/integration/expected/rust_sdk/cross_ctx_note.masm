@@ -94,7 +94,13 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     exec.::intrinsics::mem::load_sw
     trace.252
     nop
+    push.0
+    mul.4294967296
+    add
     push.11
+    push.0
+    mul.4294967296
+    add
     dup.1
     assert_eq
     trace.240
@@ -103,6 +109,9 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     trace.252
     nop
     push.53
+    push.0
+    mul.4294967296
+    add
     dup.1
     assert_eq
     swap.1

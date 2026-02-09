@@ -468,6 +468,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-another-word(
     u32assert
     assertz
     push.5
+    push.0
+    mul.4294967296
+    add
     movup.6
     add
     swap.1
@@ -489,6 +492,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-another-word(
     u32assert
     assertz
     push.4
+    push.0
+    mul.4294967296
+    add
     movup.5
     add
     swap.1
@@ -510,6 +516,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-another-word(
     u32assert
     assertz
     push.3
+    push.0
+    mul.4294967296
+    add
     movup.4
     add
     swap.1
@@ -528,6 +537,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-another-word(
     u32assert
     assertz
     push.2
+    push.0
+    mul.4294967296
+    add
     movup.3
     add
     swap.1
@@ -548,6 +560,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-felt(felt) -> felt
     trace.252
     nop
     push.3
+    push.0
+    mul.4294967296
+    add
     add
 end
 
@@ -686,6 +701,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-mixed(
     u32assert
     assertz
     push.7
+    push.0
+    mul.4294967296
+    add
     movup.7
     add
     swap.1
@@ -728,6 +746,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-mixed(
     u32assert
     assertz
     push.6
+    push.0
+    mul.4294967296
+    add
     movup.5
     add
     swap.1
@@ -798,6 +819,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-nested(
     u32assert
     assertz
     push.8
+    push.0
+    mul.4294967296
+    add
     movup.5
     add
     swap.1
@@ -819,6 +843,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-nested(
     u32assert
     assertz
     push.8
+    push.0
+    mul.4294967296
+    add
     movup.4
     add
     swap.1
@@ -837,6 +864,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-nested(
     u32assert
     assertz
     push.8
+    push.0
+    mul.4294967296
+    add
     movup.3
     add
     swap.1
@@ -877,6 +907,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-pair(felt, felt) -> i32
     u32assert
     assertz
     push.4
+    push.0
+    mul.4294967296
+    add
     movup.4
     add
     swap.1
@@ -895,6 +928,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-pair(felt, felt) -> i32
     u32assert
     assertz
     push.4
+    push.0
+    mul.4294967296
+    add
     movup.3
     add
     swap.1
@@ -939,6 +975,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-triple(
     u32assert
     assertz
     push.5
+    push.0
+    mul.4294967296
+    add
     movup.5
     add
     swap.1
@@ -960,6 +999,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-triple(
     u32assert
     assertz
     push.5
+    push.0
+    mul.4294967296
+    add
     movup.4
     add
     swap.1
@@ -978,6 +1020,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-triple(
     u32assert
     assertz
     push.5
+    push.0
+    mul.4294967296
+    add
     movup.3
     add
     swap.1
@@ -1023,6 +1068,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-word(
     u32assert
     assertz
     push.4
+    push.0
+    mul.4294967296
+    add
     movup.6
     add
     swap.1
@@ -1044,6 +1092,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-word(
     u32assert
     assertz
     push.3
+    push.0
+    mul.4294967296
+    add
     movup.5
     add
     swap.1
@@ -1065,6 +1116,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-word(
     u32assert
     assertz
     push.2
+    push.0
+    mul.4294967296
+    add
     movup.4
     add
     swap.1
@@ -1083,6 +1137,9 @@ proc miden:cross-ctx-account-word/foo@1.0.0#process-word(
     u32assert
     assertz
     push.1
+    push.0
+    mul.4294967296
+    add
     movup.3
     add
     swap.1

@@ -27,18 +27,18 @@ impl Account {
 
     #[unsafe(no_mangle)]
     pub fn test_felt_ops_smoke(a: Felt, b: Felt) -> Felt {
-        let d = a.as_u64();
+        let d = a.as_canonical_u64();
         if a > b {
             a.inv() + b
         } else if a < b {
             a.exp(b) - b
         } else if a <= b {
-            a.pow2() * b
+            a.square() * b
         } else if a >= b {
             b / a
         } else if a == b {
             miden::assert_eq(a, b);
-            a + Felt::from_u64_unchecked(d)
+            a + Felt::new(d)
         } else if a != b {
             -a
         } else if b.is_odd() {
@@ -56,7 +56,7 @@ pub struct Note;
 impl Note {
     #[unsafe(no_mangle)]
     pub fn note_script() -> Felt {
-        let mut sum = Felt::new(0).unwrap();
+        let mut sum = Felt::new(0);
         for input in miden::active_note::get_inputs() {
             sum = sum + input;
         }

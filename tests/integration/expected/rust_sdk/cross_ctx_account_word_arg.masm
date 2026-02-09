@@ -65,7 +65,7 @@ proc cross_ctx_account_word_arg::bindings::__link_custom_section_describing_impo
     nop
 end
 
-@locals("1")
+@locals("2")
 @callconv("C")
 proc miden:cross-ctx-account-word-arg/foo@1.0.0#process-word(
     felt,
@@ -99,58 +99,118 @@ proc miden:cross-ctx-account-word-arg/foo@1.0.0#process-word(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
+    locaddr.1
+    push.0
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
     push.16384
-    movup.15
+    push.0
+    mul.4294967296
+    add
+    movup.14
     mul
     push.8192
-    movup.15
+    push.0
+    mul.4294967296
+    add
+    movup.14
     mul
     push.4096
-    movup.15
+    push.0
+    mul.4294967296
+    add
+    movup.14
     mul
     add
     add
     push.2048
-    movup.13
+    push.0
+    mul.4294967296
+    add
+    movup.12
     mul
     push.1024
-    movup.13
+    push.0
+    mul.4294967296
+    add
+    movup.12
     mul
     push.512
-    movup.13
+    push.0
+    mul.4294967296
+    add
+    movup.12
     mul
     push.256
-    movup.13
+    push.0
+    mul.4294967296
+    add
+    movup.12
     mul
     add
     add
     add
     push.128
-    movup.10
+    push.0
+    mul.4294967296
+    add
+    movup.9
     mul
     push.64
-    movup.10
+    push.0
+    mul.4294967296
+    add
+    movup.9
     mul
     push.32
-    movup.10
+    push.0
+    mul.4294967296
+    add
+    movup.9
     mul
     push.16
-    movup.10
+    push.0
+    mul.4294967296
+    add
+    movup.9
     mul
     add
     add
     add
     push.8
-    movup.7
+    push.0
+    mul.4294967296
+    add
+    movup.6
     mul
     push.4
-    movup.7
+    push.0
+    mul.4294967296
+    add
+    movup.6
     mul
     push.2
-    movup.7
+    push.0
+    mul.4294967296
+    add
+    movup.6
     mul
     push.1
-    movup.7
+    push.0
+    mul.4294967296
+    add
+    locaddr.1
+    push.0
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
     mul
     add
     add

@@ -19,24 +19,44 @@ builtin.component miden:base/note-script@1.0.0 {
         private builtin.function @miden:base/note-script@1.0.0#run(v17: felt, v18: felt, v19: felt, v20: felt) {
         ^block12(v17: felt, v18: felt, v19: felt, v20: felt):
             hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/wit_bindgen::rt::run_ctors_once()
-            v93 = arith.constant 7 : felt;
-            v85 = arith.constant 15 : felt;
-            v86 = arith.constant 14 : felt;
-            v87 = arith.constant 13 : felt;
-            v88 = arith.constant 12 : felt;
-            v89 = arith.constant 11 : felt;
-            v90 = arith.constant 10 : felt;
-            v91 = arith.constant 9 : felt;
-            v92 = arith.constant 8 : felt;
-            v94 = arith.constant 6 : felt;
-            v95 = arith.constant 5 : felt;
-            v96 = arith.constant 4 : felt;
-            v97 = arith.constant 3 : felt;
-            v98 = arith.constant 2 : felt;
-            v99 = arith.constant 1 : felt;
-            v53 = hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import22(v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86, v85, v93) : felt
-            v83 = arith.constant 458760 : felt;
-            hir.assert_eq v53, v83;
+            v83 = arith.constant 7 : i64;
+            v52 = arith.trunc v83 : felt;
+            v49 = arith.constant 15 : i64;
+            v50 = arith.trunc v49 : felt;
+            v47 = arith.constant 14 : i64;
+            v48 = arith.trunc v47 : felt;
+            v45 = arith.constant 13 : i64;
+            v46 = arith.trunc v45 : felt;
+            v43 = arith.constant 12 : i64;
+            v44 = arith.trunc v43 : felt;
+            v41 = arith.constant 11 : i64;
+            v42 = arith.trunc v41 : felt;
+            v39 = arith.constant 10 : i64;
+            v40 = arith.trunc v39 : felt;
+            v37 = arith.constant 9 : i64;
+            v38 = arith.trunc v37 : felt;
+            v35 = arith.constant 8 : i64;
+            v36 = arith.trunc v35 : felt;
+            v33 = arith.constant 7 : i64;
+            v34 = arith.trunc v33 : felt;
+            v31 = arith.constant 6 : i64;
+            v32 = arith.trunc v31 : felt;
+            v29 = arith.constant 5 : i64;
+            v30 = arith.trunc v29 : felt;
+            v27 = arith.constant 4 : i64;
+            v28 = arith.trunc v27 : felt;
+            v25 = arith.constant 3 : i64;
+            v26 = arith.trunc v25 : felt;
+            v23 = arith.constant 2 : i64;
+            v24 = arith.trunc v23 : felt;
+            hir.store_local v24 #[local = lv0];
+            v21 = arith.constant 1 : i64;
+            v22 = arith.trunc v21 : felt;
+            v85 = hir.load_local  : felt #[local = lv0];
+            v53 = hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import22(v22, v85, v26, v28, v30, v32, v34, v36, v38, v40, v42, v44, v46, v48, v50, v52) : felt
+            v54 = arith.constant 458760 : i64;
+            v55 = arith.trunc v54 : felt;
+            hir.assert_eq v53, v55;
             builtin.ret ;
         };
 
@@ -63,12 +83,12 @@ builtin.component miden:base/note-script@1.0.0 {
                 v70 = hir.bitcast v69 : ptr<byte, i32>;
                 v71 = hir.load v70 : i32;
                 hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/__wasm_call_ctors()
-                v101 = arith.constant 1 : u8;
-                v103 = arith.constant 1048588 : i32;
-                v73 = arith.add v71, v103 : i32 #[overflow = wrapping];
+                v87 = arith.constant 1 : u8;
+                v89 = arith.constant 1048588 : i32;
+                v73 = arith.add v71, v89 : i32 #[overflow = wrapping];
                 v77 = hir.bitcast v73 : u32;
                 v78 = hir.int_to_ptr v77 : ptr<byte, u8>;
-                hir.store v78, v101;
+                hir.store v78, v87;
                 scf.yield ;
             };
             builtin.ret ;

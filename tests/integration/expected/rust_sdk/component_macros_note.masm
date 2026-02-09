@@ -130,8 +130,12 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     push.0
     mul.4294967296
     add
+    push.99
+    push.0
+    mul.4294967296
+    add
     push.8
-    dup.2
+    dup.3
     add
     u32assert
     push.8
@@ -153,12 +157,20 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     trace.252
     nop
     push.8
-    dup.2
+    dup.3
     u32wrapping_add
     push.66
+    push.0
+    mul.4294967296
+    add
     push.77
+    push.0
+    mul.4294967296
+    add
     push.88
-    push.99
+    push.0
+    mul.4294967296
+    add
     push.44
     push.0
     mul.4294967296
@@ -172,29 +184,30 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     mul.4294967296
     add
     dup.8
-    dup.4
+    dup.8
+    dup.9
     dup.6
     dup.8
     dup.10
+    movup.3
+    swap.8
+    movdn.3
     swap.1
     swap.10
     swap.6
-    swap.2
-    swap.9
-    swap.5
     swap.1
     swap.11
     swap.7
-    swap.3
-    swap.8
-    swap.4
+    swap.2
+    swap.9
+    swap.5
     trace.240
     nop
     exec.::"miden:base/note-script@1.0.0"::component_macros_note::component_macros_note::bindings::miden::component_macros_account::component_macros_account::test_custom_types::wit_import22
     trace.252
     nop
     push.12
-    dup.2
+    dup.3
     add
     u32assert
     push.4
@@ -211,7 +224,7 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     trace.252
     nop
     push.8
-    dup.3
+    dup.4
     add
     u32assert
     push.4
@@ -230,18 +243,19 @@ proc miden:base/note-script@1.0.0#run(felt, felt, felt, felt)
     push.0
     push.1
     movup.2
-    movup.4
+    movup.5
     eq
     neq
     neq
     if.true
         drop
         drop
+        drop
         push.0
     else
         push.0
         push.1
-        push.99
+        movup.2
         movup.3
         eq
         neq

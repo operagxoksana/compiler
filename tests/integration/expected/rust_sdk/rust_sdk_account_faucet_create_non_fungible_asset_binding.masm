@@ -136,6 +136,9 @@ proc miden:rust-sdk-account-faucet-create-non-fungible-asset-binding/rust-sdk-ac
     nop
     push.0
     push.0
+    mul.4294967296
+    add
+    push.0
     movup.2
     swap.1
     push.1
