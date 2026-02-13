@@ -10,7 +10,7 @@ builtin.component miden:base/note-script@1.0.0 {
             builtin.ret ;
         };
 
-        private builtin.function @<miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq(v0: i32, v1: i32) -> i32 {
+        private builtin.function @<miden_field::word::Word as core::cmp::PartialEq>::eq(v0: i32, v1: i32) -> i32 {
         ^block9(v0: i32, v1: i32):
             v5 = hir.bitcast v0 : u32;
             v6 = arith.constant 4 : u32;
@@ -198,7 +198,7 @@ builtin.component miden:base/note-script@1.0.0 {
                     v141 = arith.add v98, v409 : i32 #[overflow = wrapping];
                     v410 = arith.constant 16 : i32;
                     v139 = arith.add v98, v410 : i32 #[overflow = wrapping];
-                    v142 = hir.exec @miden:base/note-script@1.0.0/rust_sdk_swapp_note_bindings/<miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq(v139, v141) : i32
+                    v142 = hir.exec @miden:base/note-script@1.0.0/rust_sdk_swapp_note_bindings/<miden_field::word::Word as core::cmp::PartialEq>::eq(v139, v141) : i32
                     v407 = arith.constant 0 : i32;
                     v408 = arith.constant 0 : i32;
                     v144 = arith.eq v142, v408 : i1;
@@ -215,7 +215,7 @@ builtin.component miden:base/note-script@1.0.0 {
                         v152 = arith.add v98, v404 : i32 #[overflow = wrapping];
                         v405 = arith.constant 32 : i32;
                         v150 = arith.add v98, v405 : i32 #[overflow = wrapping];
-                        v153 = hir.exec @miden:base/note-script@1.0.0/rust_sdk_swapp_note_bindings/<miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq(v150, v152) : i32
+                        v153 = hir.exec @miden:base/note-script@1.0.0/rust_sdk_swapp_note_bindings/<miden_field::word::Word as core::cmp::PartialEq>::eq(v150, v152) : i32
                         v402 = arith.constant 0 : i32;
                         v403 = arith.constant 0 : i32;
                         v155 = arith.eq v153, v403 : i1;

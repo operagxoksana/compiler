@@ -16,20 +16,20 @@ proc init
     trace.240
     exec.::intrinsics::mem::heap_init
     trace.252
-    push.[7028007876379170725,18060021366771303825,13412364500725888848,14178532912296021363]
+    push.[11433644200372730325,11349691924608542755,2482790568805339584,12018669310975905431]
     adv.push_mapval
     push.262144
-    push.1
+    push.3
     trace.240
     exec.::miden::core::mem::pipe_preimage_to_memory
     trace.252
     drop
     push.1048576
     u32assert
-    mem_store.278536
+    mem_store.278544
     push.0
     u32assert
-    mem_store.278537
+    mem_store.278545
 end
 
 # mod ::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding
@@ -43,7 +43,7 @@ end
 
 @callconv("C")
 proc __rustc::__rust_alloc(i32, i32) -> i32
-    push.1114148
+    push.1114180
     u32divmod.4
     swap.1
     trace.240
@@ -51,7 +51,7 @@ proc __rustc::__rust_alloc(i32, i32) -> i32
     exec.::intrinsics::mem::load_sw
     trace.252
     nop
-    push.1048584
+    push.1048612
     u32wrapping_add
     movup.2
     swap.1
@@ -71,7 +71,7 @@ end
 
 @callconv("C")
 proc __rustc::__rust_alloc_zeroed(i32, i32) -> i32
-    push.1114148
+    push.1114180
     u32divmod.4
     swap.1
     trace.240
@@ -79,7 +79,7 @@ proc __rustc::__rust_alloc_zeroed(i32, i32) -> i32
     exec.::intrinsics::mem::load_sw
     trace.252
     nop
-    push.1048584
+    push.1048612
     u32wrapping_add
     dup.1
     swap.2
@@ -190,7 +190,7 @@ end
 proc wit_bindgen::rt::run_ctors_once(
 
 )
-    push.1114148
+    push.1114180
     u32divmod.4
     swap.1
     trace.240
@@ -198,7 +198,7 @@ proc wit_bindgen::rt::run_ctors_once(
     exec.::intrinsics::mem::load_sw
     trace.252
     nop
-    push.1048588
+    push.1048616
     u32wrapping_add
     u32divmod.4
     swap.1
@@ -219,7 +219,7 @@ proc wit_bindgen::rt::run_ctors_once(
     if.true
         nop
     else
-        push.1114148
+        push.1114180
         u32divmod.4
         swap.1
         trace.240
@@ -233,7 +233,7 @@ proc wit_bindgen::rt::run_ctors_once(
         trace.252
         nop
         push.1
-        push.1048588
+        push.1048616
         movup.2
         u32wrapping_add
         u32divmod.4
@@ -455,7 +455,7 @@ end
 proc <alloc::vec::Vec<miden_base_sys::bindings::types::Asset>>::with_capacity(
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -465,7 +465,7 @@ proc <alloc::vec::Vec<miden_base_sys::bindings::types::Asset>>::with_capacity(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -544,7 +544,7 @@ proc <alloc::vec::Vec<miden_base_sys::bindings::types::Asset>>::with_capacity(
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -561,7 +561,7 @@ proc <alloc::raw_vec::RawVecInner>::with_capacity_in(
     i32,
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -571,7 +571,7 @@ proc <alloc::raw_vec::RawVecInner>::with_capacity_in(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -688,7 +688,7 @@ proc <alloc::raw_vec::RawVecInner>::with_capacity_in(
         nop
         push.16
         u32wrapping_add
-        push.1114144
+        push.1114176
         u32divmod.4
         swap.1
         trace.240
@@ -731,7 +731,7 @@ end
 proc miden_base_sys::bindings::active_note::get_assets(
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -741,7 +741,7 @@ proc miden_base_sys::bindings::active_note::get_assets(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -837,7 +837,7 @@ proc miden_base_sys::bindings::active_note::get_assets(
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -851,7 +851,7 @@ end
 proc miden_base_sys::bindings::active_note::add_assets_to_account(
 
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -861,7 +861,7 @@ proc miden_base_sys::bindings::active_note::add_assets_to_account(
     nop
     push.48
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -1165,7 +1165,7 @@ proc miden_base_sys::bindings::active_note::add_assets_to_account(
     nop
     push.48
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1180,73 +1180,113 @@ proc miden_base_sys::bindings::native_account::add_asset(
     i32,
     i32
 )
-    push.12
-    dup.2
-    add
-    u32assert
-    push.4
-    dup.1
-    swap.1
-    u32mod
-    u32assert
-    assertz
+    push.1114180
     u32divmod.4
     swap.1
     trace.240
     nop
-    exec.::intrinsics::mem::load_felt
+    exec.::intrinsics::mem::load_sw
     trace.252
     nop
-    push.8
+    push.1048596
+    u32wrapping_add
+    push.3
     dup.3
-    add
-    u32assert
-    push.4
-    dup.1
-    swap.1
-    u32mod
-    u32assert
-    assertz
-    u32divmod.4
-    swap.1
-    trace.240
-    nop
-    exec.::intrinsics::mem::load_felt
-    trace.252
-    nop
-    push.4
-    dup.4
-    add
-    u32assert
-    push.4
-    dup.1
-    swap.1
-    u32mod
-    u32assert
-    assertz
-    u32divmod.4
-    swap.1
-    trace.240
-    nop
-    exec.::intrinsics::mem::load_felt
-    trace.252
-    nop
-    movup.4
-    push.4
-    dup.1
-    swap.1
-    u32mod
-    u32assert
-    assertz
-    u32divmod.4
-    swap.1
-    trace.240
-    nop
-    exec.::intrinsics::mem::load_felt
-    trace.252
-    nop
-    movdn.3
+    dup.2
     swap.2
+    swap.1
+    trace.240
+    nop
+    exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.2
+    dup.4
+    dup.3
+    swap.2
+    swap.1
+    trace.240
+    nop
+    exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1
+    dup.5
+    dup.4
+    swap.2
+    swap.1
+    trace.240
+    nop
+    exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.0
+    movup.2
+    swap.4
+    movdn.2
+    swap.1
+    swap.6
+    trace.240
+    nop
+    exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    swap.3
+    swap.4
+    swap.2
+    swap.1
     trace.240
     nop
     exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::"miden::protocol::native_account::add_asset"
@@ -1258,7 +1298,7 @@ end
 proc <alloc::vec::into_iter::IntoIter<miden_base_sys::bindings::types::Asset> as core::ops::drop::Drop>::drop(
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1268,7 +1308,7 @@ proc <alloc::vec::into_iter::IntoIter<miden_base_sys::bindings::types::Asset> as
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -1307,7 +1347,7 @@ proc <alloc::vec::into_iter::IntoIter<miden_base_sys::bindings::types::Asset> as
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1321,7 +1361,7 @@ end
 proc <<alloc::vec::into_iter::IntoIter<_, _> as core::ops::drop::Drop>::drop::DropGuard<miden_base_sys::bindings::types::Asset, alloc::alloc::Global> as core::ops::drop::Drop>::drop(
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1331,7 +1371,7 @@ proc <<alloc::vec::into_iter::IntoIter<_, _> as core::ops::drop::Drop>::drop::Dr
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -1430,7 +1470,7 @@ proc <<alloc::vec::into_iter::IntoIter<_, _> as core::ops::drop::Drop>::drop::Dr
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1452,6 +1492,34 @@ proc <alloc::raw_vec::RawVec<miden_base_sys::bindings::types::Asset> as core::op
     exec.::"miden:base/note-script@1.0.0"::rust_sdk_note_add_assets_to_account_binding::<alloc::raw_vec::RawVecInner>::deallocate
     trace.252
     nop
+end
+
+@callconv("C")
+proc <miden_field::word::Word as core::ops::index::Index<usize>>::index(
+    i32,
+    i32,
+    i32
+) -> i32
+    movup.2
+    drop
+    push.0
+    push.3
+    dup.3
+    swap.1
+    u32gt
+    neq
+    if.true
+        drop
+        drop
+        push.0
+        assert
+    else
+        push.2
+        movup.2
+        swap.1
+        u32shl
+        u32wrapping_add
+    end
 end
 
 @callconv("C")
@@ -1538,7 +1606,7 @@ proc <alloc::raw_vec::RawVecInner>::deallocate(
     i32,
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1548,7 +1616,7 @@ proc <alloc::raw_vec::RawVecInner>::deallocate(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -1639,7 +1707,7 @@ proc <alloc::raw_vec::RawVecInner>::deallocate(
     end
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1813,7 +1881,7 @@ proc <alloc::alloc::Global as core::alloc::Allocator>::allocate(
     i32,
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1823,7 +1891,7 @@ proc <alloc::alloc::Global as core::alloc::Allocator>::allocate(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -1916,7 +1984,7 @@ proc <alloc::alloc::Global as core::alloc::Allocator>::allocate(
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1934,7 +2002,7 @@ proc <alloc::raw_vec::RawVecInner>::try_allocate_in(
     i32,
     i32
 )
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240
@@ -1944,7 +2012,7 @@ proc <alloc::raw_vec::RawVecInner>::try_allocate_in(
     nop
     push.16
     u32wrapping_sub
-    push.1114144
+    push.1114176
     dup.1
     swap.1
     u32divmod.4
@@ -2325,7 +2393,7 @@ proc <alloc::raw_vec::RawVecInner>::try_allocate_in(
     nop
     push.16
     u32wrapping_add
-    push.1114144
+    push.1114176
     u32divmod.4
     swap.1
     trace.240

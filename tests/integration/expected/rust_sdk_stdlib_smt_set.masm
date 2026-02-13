@@ -5,15 +5,23 @@ proc init
     trace.240
     exec.::intrinsics::mem::heap_init
     trace.252
+    push.[5069684220085911070,12575515707502338447,6750708512266443820,15471277435400365850]
+    adv.push_mapval
+    push.262144
+    push.2
+    trace.240
+    exec.::miden::core::mem::pipe_preimage_to_memory
+    trace.252
+    drop
     push.1048576
     u32assert
-    mem_store.278528
+    mem_store.278536
 end
 
 # mod ::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set
 
 @callconv("C")
-proc <miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq(
+proc <miden_field::word::Word as core::cmp::PartialEq>::eq(
     i32,
     i32
 ) -> i32
@@ -207,7 +215,7 @@ pub proc entrypoint(
     felt,
     felt
 )
-    push.1114112
+    push.1114144
     u32divmod.4
     swap.1
     trace.240
@@ -216,12 +224,12 @@ pub proc entrypoint(
     trace.252
     nop
     push.4294967264
-    push.96
+    push.128
     dup.2
     swap.1
     u32wrapping_sub
     u32and
-    push.1114112
+    push.1114144
     dup.1
     swap.1
     u32divmod.4
@@ -231,27 +239,524 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_sw
     trace.252
     nop
-    push.64
+    push.12
     dup.1
-    u32wrapping_add
+    add
+    u32assert
+    push.4
+    dup.1
     swap.1
-    swap.13
+    u32mod
+    u32assert
+    assertz
+    movup.6
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.8
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.5
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.4
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.4
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    dup.0
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.3
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.28
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.6
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.24
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.5
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.20
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.4
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.16
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.3
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.44
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.6
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.40
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.5
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.36
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.4
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.32
+    dup.1
+    add
+    u32assert
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    movup.3
+    swap.1
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::store_felt
+    trace.252
+    nop
+    push.1048588
+    push.3
+    dup.2
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.2
+    dup.3
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.1
+    dup.4
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.0
+    dup.5
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.3
+    push.16
+    dup.7
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.2
+    push.16
+    dup.8
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.1
+    push.16
+    dup.9
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.0
+    push.16
+    dup.10
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.3
+    push.32
+    dup.11
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.2
+    push.32
+    dup.12
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.1
+    push.32
+    dup.13
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.1048588
+    push.0
+    push.32
+    dup.14
+    u32wrapping_add
+    trace.240
+    nop
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::ops::index::Index<usize>>::index
+    trace.252
+    nop
+    push.4
+    dup.1
+    swap.1
+    u32mod
+    u32assert
+    assertz
+    u32divmod.4
+    swap.1
+    trace.240
+    nop
+    exec.::intrinsics::mem::load_felt
+    trace.252
+    nop
+    push.96
+    dup.13
+    u32wrapping_add
+    movup.5
+    swap.7
+    movdn.5
+    movup.4
+    swap.8
+    movdn.4
+    movup.3
     swap.9
-    swap.5
+    movdn.3
+    movup.2
+    swap.10
+    movdn.2
+    swap.1
+    swap.11
     swap.1
     swap.12
-    swap.10
-    swap.4
-    swap.2
-    swap.14
-    swap.8
-    swap.6
     trace.240
     nop
     exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::"miden::core::collections::smt::set"
     trace.252
     nop
-    push.88
+    push.120
     dup.1
     add
     u32assert
@@ -269,7 +774,7 @@ pub proc entrypoint(
     trace.252
     nop
     swap.1
-    push.80
+    push.112
     dup.3
     add
     u32assert
@@ -287,7 +792,7 @@ pub proc entrypoint(
     trace.252
     nop
     swap.1
-    push.72
+    push.104
     dup.5
     add
     u32assert
@@ -305,7 +810,7 @@ pub proc entrypoint(
     trace.252
     nop
     swap.1
-    push.64
+    push.96
     dup.7
     add
     u32assert
@@ -323,7 +828,7 @@ pub proc entrypoint(
     trace.252
     nop
     swap.1
-    push.24
+    push.56
     dup.9
     add
     u32assert
@@ -344,7 +849,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_dw
     trace.252
     nop
-    push.16
+    push.48
     dup.7
     add
     u32assert
@@ -365,7 +870,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_dw
     trace.252
     nop
-    push.40
+    push.72
     dup.5
     add
     u32assert
@@ -386,7 +891,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_dw
     trace.252
     nop
-    push.32
+    push.64
     dup.3
     add
     u32assert
@@ -407,7 +912,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_dw
     trace.252
     nop
-    push.60
+    push.92
     dup.1
     add
     u32assert
@@ -429,7 +934,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.56
+    push.88
     dup.1
     add
     u32assert
@@ -451,7 +956,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.52
+    push.84
     dup.1
     add
     u32assert
@@ -473,7 +978,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.48
+    push.80
     dup.1
     add
     u32assert
@@ -495,7 +1000,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.76
+    push.108
     dup.1
     add
     u32assert
@@ -517,7 +1022,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.72
+    push.104
     dup.1
     add
     u32assert
@@ -539,7 +1044,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.68
+    push.100
     dup.1
     add
     u32assert
@@ -561,7 +1066,7 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.64
+    push.96
     dup.1
     add
     u32assert
@@ -583,15 +1088,15 @@ pub proc entrypoint(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
-    push.48
+    push.80
     dup.1
     u32wrapping_add
-    push.16
+    push.48
     dup.2
     u32wrapping_add
     trace.240
     nop
-    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq
+    exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::cmp::PartialEq>::eq
     trace.252
     nop
     push.0
@@ -604,15 +1109,15 @@ pub proc entrypoint(
         drop
         push.0
     else
-        push.64
+        push.96
         dup.1
         u32wrapping_add
-        push.32
+        push.64
         movup.2
         u32wrapping_add
         trace.240
         nop
-        exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_stdlib_sys::intrinsics::word::Word as core::cmp::PartialEq>::eq
+        exec.::"root_ns:root@1.0.0"::rust_sdk_stdlib_smt_set::<miden_field::word::Word as core::cmp::PartialEq>::eq
         trace.252
         nop
         push.0
@@ -625,7 +1130,7 @@ pub proc entrypoint(
             swap.1
             drop
         else
-            push.1114112
+            push.1114144
             movup.2
             swap.1
             u32divmod.4
@@ -771,5 +1276,33 @@ proc miden::core::collections::smt::set(
     exec.::intrinsics::mem::store_felt
     trace.252
     nop
+end
+
+@callconv("C")
+proc <miden_field::word::Word as core::ops::index::Index<usize>>::index(
+    i32,
+    i32,
+    i32
+) -> i32
+    movup.2
+    drop
+    push.0
+    push.3
+    dup.3
+    swap.1
+    u32gt
+    neq
+    if.true
+        drop
+        drop
+        push.0
+        assert
+    else
+        push.2
+        movup.2
+        swap.1
+        u32shl
+        u32wrapping_add
+    end
 end
 
