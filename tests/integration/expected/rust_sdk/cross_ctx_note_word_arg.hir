@@ -1,6 +1,6 @@
 builtin.component miden:base/note-script@1.0.0 {
     builtin.module public @cross_ctx_note_word_arg {
-        private builtin.function @cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import22(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: felt, v13: felt, v14: felt, v15: felt) -> felt {
+        private builtin.function @cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import19(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: felt, v13: felt, v14: felt, v15: felt) -> felt {
         ^block3(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: felt, v13: felt, v14: felt, v15: felt):
             v16 = hir.call v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15 : felt #[callee = miden:cross-ctx-account-word-arg/foo@1.0.0/process-word] #[signature = (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (result felt)];
             builtin.ret v16;
@@ -53,7 +53,7 @@ builtin.component miden:base/note-script@1.0.0 {
             v21 = arith.constant 1 : i64;
             v22 = arith.trunc v21 : felt;
             v85 = hir.load_local  : felt #[local = lv0];
-            v53 = hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import22(v22, v85, v26, v28, v30, v32, v34, v36, v38, v40, v42, v44, v46, v48, v50, v52) : felt
+            v53 = hir.exec @miden:base/note-script@1.0.0/cross_ctx_note_word_arg/cross_ctx_note_word_arg::bindings::miden::cross_ctx_account_word_arg::foo::process_word::wit_import19(v22, v85, v26, v28, v30, v32, v34, v36, v38, v40, v42, v44, v46, v48, v50, v52) : felt
             v54 = arith.constant 458760 : i64;
             v55 = arith.trunc v54 : felt;
             hir.assert_eq v53, v55;

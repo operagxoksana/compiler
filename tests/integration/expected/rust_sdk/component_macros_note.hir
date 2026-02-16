@@ -1,6 +1,6 @@
 builtin.component miden:base/note-script@1.0.0 {
     builtin.module public @component_macros_note {
-        private builtin.function @component_macros_note::bindings::miden::component_macros_account::component_macros_account::test_custom_types::wit_import22(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: i32) {
+        private builtin.function @component_macros_note::bindings::miden::component_macros_account::component_macros_account::test_custom_types::wit_import19(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: i32) {
         ^block3(v0: felt, v1: felt, v2: felt, v3: felt, v4: felt, v5: felt, v6: felt, v7: felt, v8: felt, v9: felt, v10: felt, v11: felt, v12: i32):
             v13, v14 = hir.call v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11 : felt, felt #[callee = miden:component-macros-account/component-macros-account@0.1.0/test-custom-types] #[signature = (cc canon-lower) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (param felt) (result felt felt)];
             v201 = arith.constant 0 : i32;
@@ -131,7 +131,7 @@ builtin.component miden:base/note-script@1.0.0 {
             v43 = arith.trunc v42 : felt;
             v40 = arith.constant 22 : i64;
             v41 = arith.trunc v40 : felt;
-            hir.exec @miden:base/note-script@1.0.0/component_macros_note/component_macros_note::bindings::miden::component_macros_account::component_macros_account::test_custom_types::wit_import22(v39, v41, v43, v45, v84, v91, v98, v105, v84, v91, v98, v105, v114)
+            hir.exec @miden:base/note-script@1.0.0/component_macros_note/component_macros_note::bindings::miden::component_macros_account::component_macros_account::test_custom_types::wit_import19(v39, v41, v43, v45, v84, v91, v98, v105, v84, v91, v98, v105, v114)
             v219 = arith.constant 20 : u32;
             v115 = hir.bitcast v35 : u32;
             v117 = arith.add v115, v219 : u32 #[overflow = checked];
