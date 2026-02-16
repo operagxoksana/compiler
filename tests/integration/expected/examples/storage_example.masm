@@ -735,80 +735,8 @@ proc miden:storage-example/foo@1.0.0#set-asset-qty(
                     dropw
                     drop
                 else
-                    push.12
-                    dup.1
-                    add
-                    u32assert
-                    push.4
-                    dup.1
-                    swap.1
-                    u32mod
-                    u32assert
-                    assertz
-                    u32divmod.4
-                    swap.1
-                    trace.240
-                    nop
-                    exec.::intrinsics::mem::load_felt
-                    trace.252
-                    nop
-                    push.8
-                    dup.2
-                    add
-                    u32assert
-                    push.4
-                    dup.1
-                    swap.1
-                    u32mod
-                    u32assert
-                    assertz
-                    u32divmod.4
-                    swap.1
-                    trace.240
-                    nop
-                    exec.::intrinsics::mem::load_felt
-                    trace.252
-                    nop
                     push.28
-                    dup.3
-                    add
-                    u32assert
-                    push.4
                     dup.1
-                    swap.1
-                    u32mod
-                    u32assert
-                    assertz
-                    movup.7
-                    swap.1
-                    u32divmod.4
-                    swap.1
-                    trace.240
-                    nop
-                    exec.::intrinsics::mem::store_felt
-                    trace.252
-                    nop
-                    push.24
-                    dup.3
-                    add
-                    u32assert
-                    push.4
-                    dup.1
-                    swap.1
-                    u32mod
-                    u32assert
-                    assertz
-                    movup.6
-                    swap.1
-                    u32divmod.4
-                    swap.1
-                    trace.240
-                    nop
-                    exec.::intrinsics::mem::store_felt
-                    trace.252
-                    nop
-                    push.20
-                    dup.3
                     add
                     u32assert
                     push.4
@@ -826,8 +754,8 @@ proc miden:storage-example/foo@1.0.0#set-asset-qty(
                     exec.::intrinsics::mem::store_felt
                     trace.252
                     nop
-                    push.16
-                    dup.3
+                    push.24
+                    dup.1
                     add
                     u32assert
                     push.4
@@ -843,6 +771,78 @@ proc miden:storage-example/foo@1.0.0#set-asset-qty(
                     trace.240
                     nop
                     exec.::intrinsics::mem::store_felt
+                    trace.252
+                    nop
+                    push.20
+                    dup.1
+                    add
+                    u32assert
+                    push.4
+                    dup.1
+                    swap.1
+                    u32mod
+                    u32assert
+                    assertz
+                    movup.3
+                    swap.1
+                    u32divmod.4
+                    swap.1
+                    trace.240
+                    nop
+                    exec.::intrinsics::mem::store_felt
+                    trace.252
+                    nop
+                    push.16
+                    dup.1
+                    add
+                    u32assert
+                    push.4
+                    dup.1
+                    swap.1
+                    u32mod
+                    u32assert
+                    assertz
+                    movup.2
+                    swap.1
+                    u32divmod.4
+                    swap.1
+                    trace.240
+                    nop
+                    exec.::intrinsics::mem::store_felt
+                    trace.252
+                    nop
+                    push.8
+                    dup.1
+                    add
+                    u32assert
+                    push.4
+                    dup.1
+                    swap.1
+                    u32mod
+                    u32assert
+                    assertz
+                    u32divmod.4
+                    swap.1
+                    trace.240
+                    nop
+                    exec.::intrinsics::mem::load_felt
+                    trace.252
+                    nop
+                    push.12
+                    dup.2
+                    add
+                    u32assert
+                    push.4
+                    dup.1
+                    swap.1
+                    u32mod
+                    u32assert
+                    assertz
+                    u32divmod.4
+                    swap.1
+                    trace.240
+                    nop
+                    exec.::intrinsics::mem::load_felt
                     trace.252
                     nop
                     push.44
@@ -1127,10 +1127,9 @@ proc miden:storage-example/foo@1.0.0#set-asset-qty(
                     movup.2
                     swap.7
                     movdn.2
+                    swap.10
                     swap.1
                     swap.9
-                    swap.1
-                    swap.10
                     trace.240
                     nop
                     exec.::"miden:storage-example/foo@1.0.0"::storage_example::"miden::protocol::native_account::set_map_item"
